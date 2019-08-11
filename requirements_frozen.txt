@@ -1,0 +1,7 @@
+appdirs==1.4.3
+kflash==0.8.3
+packaging==16.8
+pyelftools==0.25
+pyparsing==2.2.0
+pyserial==3.4
+six==1.10.0
