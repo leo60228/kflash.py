@@ -1038,7 +1038,7 @@ class KFlash:
                     if segment['p_filesz']==0 or segment['p_vaddr']==0:
                         KFlash.log("Skipped")
                         continue
-                    self.flash_dataframe(segment.data(), segment['p_vaddr'])
+                    self.flash_dataframe(segment.data(), segment['p_vaddr'] & 0xffffffff)
 
             def flash_firmware(self, firmware_bin, aes_key = None, address_offset = 0, sha256Prefix = True, filename = ""):
                 # type: (bytes, bytes, int, bool) -> None
